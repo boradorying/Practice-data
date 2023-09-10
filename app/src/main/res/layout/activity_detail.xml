@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/imgArea"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/nameArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여긴 이름"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/imgArea"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phoneArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="폰번호"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toEndOf="@+id/imgArea"
+        app:layout_constraintTop_toBottomOf="@+id/nameArea" />
+
+    <TextView
+        android:id="@+id/desArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="설명"
+        android:layout_marginLeft="10dp"
+
+
+        app:layout_constraintStart_toEndOf="@+id/imgArea"
+        app:layout_constraintTop_toBottomOf="@+id/phoneArea" />
+
+    <ImageView
+        android:id="@+id/likeBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phoneArea" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
