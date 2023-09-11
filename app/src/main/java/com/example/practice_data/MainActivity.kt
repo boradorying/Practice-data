@@ -13,7 +13,7 @@ import com.example.practice_data.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
+    private val adapter:RVAdapter get() = binding.RVArea.adapter as RVAdapter //tyep casting 해줘야 RV어댑터로 바궈줘야지 안에있는 메서드 인터페이스등 가능하다
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -22,9 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
-        val adapter = RVAdapter(ItemManager.ItemList)
-        binding.RVArea.adapter = adapter
+        binding.RVArea.adapter = RVAdapter(ItemManager.ItemList)
         binding.RVArea.layoutManager = LinearLayoutManager(this)
 
         val resultLauncher =
@@ -35,11 +33,10 @@ class MainActivity : AppCompatActivity() {
                        for(i in ItemManager.ItemList.indices){
                            if (ItemManager.ItemList[i].name == modifiedItem.name){
                                ItemManager.ItemList[i] = modifiedItem
-                                   adapter.notifyDataSetChanged()
+                               adapter.notifyDataSetChanged()
                            }
                        }
                     }
-
                 }
             }
 
@@ -52,7 +49,6 @@ class MainActivity : AppCompatActivity() {
                 resultLauncher.launch(intent)
             }
         }
-
-
     }
+
 }
