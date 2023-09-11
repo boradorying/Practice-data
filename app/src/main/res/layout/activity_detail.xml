@@ -51,11 +51,20 @@
 
     <ImageView
         android:id="@+id/likeBtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:src="@drawable/baseline_favorite_border_24"
                 app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/phoneArea" />
+
+    <ImageView
+        android:id="@+id/notiBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_notifications_active_24"
+        app:layout_constraintEnd_toEndOf="@+id/likeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/likeBtn" />
+
 
 
 

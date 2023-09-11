@@ -23,10 +23,26 @@ class DetailActivity : AppCompatActivity() {
             binding.imgArea.setImageResource(itemData.photo)
 
             if (itemData.isHeart ){
+
+
                 binding.likeBtn.setImageResource(R.drawable.baseline_favorite_24)
             }else{
                 binding.likeBtn.setImageResource(R.drawable.baseline_favorite_border_24)
             }
+        }
+
+        binding.likeBtn.setOnClickListener {
+            itemData!!.isHeart = !itemData.isHeart
+           if (itemData.isHeart){
+            binding.likeBtn.setImageResource(R.drawable.baseline_favorite_24)}
+            else{
+                binding.likeBtn.setImageResource(R.drawable.baseline_favorite_border_24)
+           }
+
+            val resultIntent = Intent()
+            resultIntent.putExtra("item",itemData)
+            setResult(RESULT_OK,resultIntent)
+
         }
 
 

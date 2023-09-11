@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity() {
                 if (result.resultCode == RESULT_OK) {
                     val modifiedItem = result.data!!.getParcelableExtra<ItemData>("item")
                     if (modifiedItem != null){
-                        for (i in ItemManager.ItemList.indices){
-                            if (ItemManager.ItemList[i].name == modifiedItem.name){
-                                ItemManager.ItemList[i]=modifiedItem
-                                adapter.notifyDataSetChanged()
-                            }
-                        }
+                       for(i in ItemManager.ItemList.indices){
+                           if (ItemManager.ItemList[i].name == modifiedItem.name){
+                               ItemManager.ItemList[i] = modifiedItem
+                                   adapter.notifyDataSetChanged()
+                           }
+                       }
                     }
 
                 }
@@ -52,5 +52,7 @@ class MainActivity : AppCompatActivity() {
                 resultLauncher.launch(intent)
             }
         }
+
+
     }
 }

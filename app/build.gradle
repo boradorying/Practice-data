@@ -1,7 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-parcelize'
+    id 'kotlin-parcelize'//직렬화로추가
+    id 'kotlin-android'//직렬화로추가
 }
 
 android {
