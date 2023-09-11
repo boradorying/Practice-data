@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         binding.RVArea.adapter = RVAdapter(ItemManager.ItemList)
         binding.RVArea.layoutManager = LinearLayoutManager(this)
 
@@ -49,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 resultLauncher.launch(intent)
             }
         }
+
     }
 
 }
